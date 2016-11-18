@@ -4,21 +4,25 @@ var TodoComponent = Vue.extend({
             inEditMode: false
         }
     },
-    props: ['todo'],
-    template: '<div><span v-on:click="clicked" v-show="!inEditMode">{{ todo.title }}</span><input v-model="todo.title" v-on:keyup.enter="saved" v-show="inEditMode" /> </div>',
+    props: ['todo', 'index'],
+    template: '<div><span v-on:click="clicked" v-show="!inEditMode">{{ todo.title }}</span><input v-model="todo.title" v-on:keyup.enter="saved" v-show="inEditMode" /> <span><button type="button" v-on:click="removeTodo()"> X</button></span> </div>',
     methods: {
         clicked: function() {
             this.inEditMode = true;
         },
         saved: function() {
             this.inEditMode = false;
+        },
+        removeTodo: function() {
+            //console.log(this.index);
+            todoList.todos.splice(this.index, 1);
         }
     }
 });
 
 Vue.component('todo-component', TodoComponent);
 
-new Vue({
+var todoList = new Vue({
     el: '#app',
     data: {
         message: 'Todo app',
@@ -43,9 +47,6 @@ new Vue({
         clearTodo: function() {
             this.todoText = '';
 
-        },
-        removeTodo: function(index) {
-            this.todos.splice(index, 1);
         }
     }
 })

@@ -12,9 +12,9 @@
     <div id="app">
         <h2 class="title">Todos </h2>
         <ul v-if="showTodos" class="list">
-            <li v-for="todo in todos" class="single-li">
-                <todo-component v-bind:todo="todo"></todo-component>
-                <span><button type="button" v-on:click="removeTodo($index)"> X</button></span>
+            <li v-for="(todo, index) in todos" class="single-li">
+                <todo-component v-bind:todo="todo" v-bind:index="index"></todo-component>
+               
             </li>
         </ul>
         <p v-else>

@@ -24,16 +24,17 @@
     list-style: none;
     text-align: center;
 }
+
 button {
-	border-radius: 0 !important;
-	background-color: #FF6363;
-	color: #fff;
-	border: none;
+    border-radius: 0 !important;
+    background-color: #FF6363;
+    color: #fff;
+    border: none;
 }
 
 .single-li {
-	margin: 20px 0px 20px 0px;
-	padding-top: 20px;
-	border-top: #f1f1f1 solid 1px;
-	margin-left: -40px;
+    margin: 20px 0px 20px 0px;
+    padding-top: 20px;
+    border-top: #f1f1f1 solid 1px;
+    margin-left: -40px;
 }
