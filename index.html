@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Vue Todo</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <h2 class="title">Todos </h2>
+        <ul v-if="showTodos" class="list">
+            <li v-for="todo in todos" class="single-li">
+                <todo-component v-bind:todo="todo"></todo-component>
+                <span><button type="button" v-on:click="removeTodo($index)"> X</button></span>
+            </li>
+        </ul>
+        <p v-else>
+            No todos for you today
+        </p>
+        <p class="list">
+            Show Todos
+            <input type="checkbox" v-model="showTodos">
+        </p>
+        <p class="list">
+        	Add more &nbsp;
+            <input type="text" v-model="todoText" v-on:keyup.esc="clearTodo" v-on:keyup.enter="createTodo">
+        </p>
+    </div>
+    <script src="js/vue.js" charset="utf-8"></script>
+    <script src="js/main.js" charset="utf-8"></script>
+</body>
+
+</html>

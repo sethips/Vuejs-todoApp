@@ -1,0 +1,39 @@
+#app {
+    background-color: #fff;
+    width: 30%;
+    padding: 20px;
+    color: #666;
+    line-height: 1.5em;
+    font-family: 'Lato', sans-serif;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    margin: 0 auto;
+    margin-top: 3%;
+}
+
+*:focus {
+    outline: none;
+}
+
+.title {
+    font-size: 2.5em;
+    font-weight: 300;
+    text-align: center;
+}
+
+.list {
+    list-style: none;
+    text-align: center;
+}
+button {
+	border-radius: 0 !important;
+	background-color: #FF6363;
+	color: #fff;
+	border: none;
+}
+
+.single-li {
+	margin: 20px 0px 20px 0px;
+	padding-top: 20px;
+	border-top: #f1f1f1 solid 1px;
+	margin-left: -40px;
+}
